@@ -39,13 +39,7 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-6 text-lg text-foreground/80">
               <p>
-                This initiative is brought to you by{" "}
-                <span className="font-semibold text-primary">Enfolded Media</span>{" "}
-                — a creative studio helping businesses speak with their audience, not at them.
-              </p>
-              <p>
-                We serve the diverse tapestry of Britain's multicultural landscape, 
-                creating beautiful design that connects across cultures and languages.
+                We create beautiful design that connects across cultures and languages.
               </p>
               <p>
                 Our approach combines cultural sensitivity with design excellence, 
@@ -67,7 +61,7 @@ const AboutSection = () => {
               <div className="text-center text-white">
                 <Users className="h-20 w-20 mx-auto mb-4 opacity-80" />
                 <h3 className="text-2xl font-bold mb-2">
-                  We serve the diverse tapestry of Britain's multicultural landscape
+                  We serve Britain's multicultural communities
                 </h3>
                 <p className="text-white/90">
                   Beautifully designed, culturally sensitive, and linguistically inclusive.

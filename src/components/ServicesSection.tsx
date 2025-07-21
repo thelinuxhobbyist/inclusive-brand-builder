@@ -73,28 +73,32 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="border-0 shadow-brand hover:shadow-brand-hover transition-all duration-300 group hover:-translate-y-2">
-              <CardHeader className="text-center pb-4">
-                <div className="mx-auto mb-4 p-3 rounded-full bg-background shadow-md group-hover:shadow-lg transition-all duration-300">
-                  <service.icon className={`h-8 w-8 ${service.color}`} />
+            <Card key={index} className="border-0 shadow-brand hover:shadow-brand-hover transition-all duration-300 group hover:-translate-y-2 overflow-hidden">
+              <div className="p-8">
+                <div className="flex items-start space-x-6">
+                  <div className="flex-shrink-0">
+                    <div className="p-4 rounded-2xl bg-gradient-primary shadow-lg group-hover:shadow-xl transition-all duration-300">
+                      <service.icon className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-3 text-foreground">{service.title}</h3>
+                    <p className="text-foreground/80 mb-4 leading-relaxed">
+                      {service.description}
+                    </p>
+                    <div className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-primary mr-3 flex-shrink-0"></div>
+                          <span className="text-sm text-foreground/80">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                <CardDescription className="text-sm">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start text-sm">
-                      <Check className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-foreground/80">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
+              </div>
             </Card>
           ))}
         </div>

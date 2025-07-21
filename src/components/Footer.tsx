@@ -88,7 +88,7 @@ const Footer = () => {
               <p className="text-secondary-foreground/80">© 2025 Enfolded Media. All rights reserved.</p>
             </div>
             <div className="text-secondary-foreground/80">
-              <p>An initiative by Enfolded Media</p>
+              <p className="text-lg font-bold text-red-400">Multilingual. Impactful. Designed for your Audience.</p>
             </div>
           </div>
         </div>

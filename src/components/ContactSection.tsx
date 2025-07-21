@@ -206,8 +206,12 @@ const ContactSection = () => {
                   <p className="text-sm text-foreground/80 mb-3">
                     Scan to chat on WhatsApp
                   </p>
-                  <div className="w-32 h-32 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Phone className="h-8 w-8 text-primary" />
+                  <div className="w-32 h-32 bg-white rounded-lg overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/4e3ecb2a-1d76-4887-b9fd-8ca0f9f1d214.png" 
+                      alt="WhatsApp QR Code" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </CardContent>
